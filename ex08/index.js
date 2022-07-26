@@ -1,20 +1,25 @@
-let num = parseOntdocument.getElementById ('numeroAqui').value;
+let num = document.getElementById ('numeroAqui');
 let botao = document. getElementById ('botao');
 let mensagem = document. getElementById ('mensagem');
 
 
-
-const resultado =  (numero) => { 
-    if (num % 2 == 0) {
-       numero  =  'Par ✌'
-    } else{
-        numero = 'Ímpar ☝' ;
+const verificaParImpar =  () => { 
+    var numero = parseInt(num.value);
+    
+    if (isNaN(numero)) {
+        mensagem.textContent = 'Digite somente número.';
+        return;
     }
-    return;
-}; 
+
+    const resultado = numero % 2 === 0 ? 'par' : 'ímpar';
+    mensagem.textContent = `O número ${numero} é ${resultado}. `;
+
+    
+};
 
 
 
-botao.addEventListener ('click', (numero) => {
-    mensagem.innerText = resultado(numero) ;
-});
+botao.onclick = verificaParImpar ;
+
+
+
