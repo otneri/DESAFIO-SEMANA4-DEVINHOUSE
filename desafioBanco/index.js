@@ -3,19 +3,19 @@ let contasClientes = [
       id: 1,
       nome: 'Cliente 01',
       saldo: 500,
-      senha: 123
+      senha: 111
     },
     {
       id: 2,
       nome: 'Cliente 02',
       saldo: 3000,
-      senha: 123
+      senha: 222
     },  
     {
       id: 3,
       nome: 'Cliente 03',
       saldo: 5000,
-      senha: 123
+      senha: 333
     },
   ];
 
@@ -129,7 +129,7 @@ let capturaSaque = () => {
   }
   
   if (contaCliente.senha !== senha) {
-    alert(senha)
+    
     mensagem.textContent = 'Senha inválida!';
     return;
   };
@@ -172,7 +172,7 @@ let capturaDeposito = () => {
   }
 
   if (contaCliente.senha !== senha) {
-    alert(senha)
+    
     mensagem.textContent = 'Senha inválida!';
     return;
   };
