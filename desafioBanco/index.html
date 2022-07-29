@@ -1,0 +1,48 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Banco Intelbras</title>
+</head>
+<body>
+    <form id="formulario">
+        <div class="cliente">
+            <label for="#proprietario">Cliente: </label>
+            <select name="proprietario" id="proprietario">
+
+            </select>
+        </div>
+
+        <div class="valor">
+            <label for="#insereValor">Valor R$:</label>
+            <input type="number" placeholder="Valor" id="insereValor">
+        </div>
+
+        <div id="opcao">
+            <label for="#conta">Movimentação:</label>
+            <select name="conta" id="conta" >
+                <option value="selecione">Selecione</option>
+                <option value="sacar">Sacar</option>
+                <option value="depositar">Depositar</option>
+            </select>
+        </div>
+
+        <div id="senha">
+            <label for="#senha">Senha:</label>
+            <input type="password" placeholder="digite sua senha" id="senha">
+        </div>
+            
+        <div>
+            
+            <button id="botao">Confirmar</button>
+        </div>
+    </form>
+    <strong id="mensagem"></strong>
+    <p id="operacao"></p>
+
+    
+</body>
+<script src="./index.js"></script>
+</html>

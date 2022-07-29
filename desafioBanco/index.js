@@ -15,7 +15,7 @@ let contasClientes = [
       id: 3,
       nome: 'Cliente 03',
       saldo: 5000,
-      senha: 123 
+      senha: 123
     },
   ];
 
@@ -111,7 +111,7 @@ let capturaSaque = () => {
   var contaCliente= contasClientes.find(function (contaCliente) {
     return contaCliente.id === id;
   });
-  let senha = parseInt(document.getElementById('senha'));
+  let senha= parseInt(document.getElementById('senha').value) ;
 
 
 
@@ -129,6 +129,7 @@ let capturaSaque = () => {
   }
   
   if (contaCliente.senha !== senha) {
+    alert(senha)
     mensagem.textContent = 'Senha inválida!';
     return;
   };
@@ -149,6 +150,7 @@ let capturaSaque = () => {
 // ex 05 
 
 
+
 let capturaDeposito = () => {
   var id = parseInt(document.getElementById('proprietario').value);
   var valor = parseInt(document.getElementById('insereValor').value);
@@ -158,6 +160,7 @@ let capturaDeposito = () => {
   let contaCliente= contasClientes.find(function (contaCliente) {
     return contaCliente.id === id;
   });
+  let senha = parseInt(document.getElementById('senha').value);
   
   let depositar = () => {
     var saldoAntigo = contaCliente.saldo;
@@ -167,6 +170,12 @@ let capturaDeposito = () => {
   
     console.log(saldoAntigo, contaCliente.saldo); 
   }
+
+  if (contaCliente.senha !== senha) {
+    alert(senha)
+    mensagem.textContent = 'Senha inválida!';
+    return;
+  };
   
   if (opcao === 'depositar') {
     console.log('Depósito selecionado!');
